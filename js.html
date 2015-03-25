@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Test</title>
+<script type="text/javascript">
+var friends={
+	Bill: [
+		firstName: "Bill",
+		lastName: "Gates",
+		number: "(123) 456 7890"
+	], 
+	Steve: [
+		firstName: "Steve",
+		lastName: "Jobs",
+		number:"(234) 456 7890"
+	];
+};
+
+// search for a contast and put it on the screen
+var search = function(name){
+	var userChoice = prompt("Enter your friends name").toLowerCase();
+	for(var name in friends){
+		console.log(friends[name]);
+		return friends[name];
+	}
+
+};
+
+
+/*
+document.getElementById('button').onclick = 
+function(name){
+	var userChoice = prompt("Enter your friends name").toLowerCase();
+	for(var name in friends){
+		console.log(friends[name]);
+		return friends[name];
+	}
+
+}; */
+//var userChoice = prompt("Enter your friends name").toLowerCase();
+	// call the function now
+	//search("Steve");
+
+</script>
+<!-- Style for the button -->
+<style type="text/css">
+
+button{
+	border: 3px solid #ff0000;
+	border-radius: 20px;
+	position: absolute;
+	margin-left: 150px;
+}
+
+input[type="text"] {
+	border: 3px solid #00ff00;
+	border-radius: 20px;
+	position: absolute;
+	text-align: center;
+
+}
+
+</style>
+</head>
+<!-- html body -->
+<body>
+	<h1> Testing JS function</h1>
+	<input type="text" placeholder="Enter friends name:" >
+	<button  id="clickme"> Click!</button>
+	
+		
+
+		<!-- JQuery for the function to act upon button event -->
+		<script type="text/javascript">
+		$(document).ready(function(){
+		
+		$('#clickme').click(function(){
+			search(name);
+		});
+		}); 
+		</script>
+	</body>
+</html>
